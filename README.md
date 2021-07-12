@@ -1,10 +1,20 @@
 # Federated learning using Genetic Algorithm
 This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.
 ## Project Overview
-In this project I tried to train the machine learning (ML) models using Federated Learning. The ML model is created using PyGAD, which is trained using the genetic algorithm (GA). 
+In this project I tried to train the machine learning (ML) models using Federated Learning. The ML model is created using PyGAD, which is trained using the genetic algorithm (GA). The training data is available on client-side only and server has no access to that data. The test data is available on server side, which is used for model evaluation.
+I have created a centralized client-server architecture in which a central server is used to orchestrate the different steps of the algorithms and coordinate all the participating nodes during the learning process. The server is responsible for the nodes selection at the beginning of the training process and for the aggregation of the received model updates.
 ## Motivation
 Most of the data in the world are contained not publicly on servers, but on client-side devices and sources (i.e. mobile phones, edge devices). Typically, users don’t end up directly sharing their data anywhere outside their devices. And if they do, there’s no guarantee of privacy. <br>
 Federated Learning (FL) is a new paradigm for building machine learning (ML) models that keeps user data private. In this way, ML models are typically trained on data that’s not been collected and stored in a centralized server. In fact, the data is decentralized and scattered across clients. Through this project, I'll apply the concepts of FL in Python to build a demonstration of how a system like this might work.
+## What is Federated Learning ?
+Federated learning (also known as collaborative learning) is a machine learning technique that trains an algorithm across multiple decentralized edge devices or servers holding local data samples, without exchanging them. This approach stands in contrast to traditional centralized machine learning techniques where all the local datasets are uploaded to one server, as well as to more classical decentralized approaches which often assume that local data samples are identically distributed(wikipedia).<br>
+Federated learning enables multiple actors to build a common, robust machine learning model without sharing data, thus allowing to address critical issues such as data privacy, data security, data access rights and access to heterogeneous data. <br>
+Assuming a federated round composed by one iteration of the learning process, the learning procedure can be summarized as follows:<br>
+**Initialization:** according to the server inputs, a machine learning model (e.g., linear regression, neural network, boosting) is chosen to be trained on local nodes and initialized. Then, nodes are activated and wait for the central server to give the calculation tasks.<br>
+**Client selection:** a fraction of local nodes is selected to start training on local data. The selected nodes acquire the current statistical model while the others wait for the next federated round.<br>
+**Configuration:** the central server orders selected nodes to undergo training of the model on their local data in a pre-specified fashion (e.g., for some mini-batch updates of gradient descent).<br>
+**Reporting:** each selected node sends its local model to the server for aggregation. The central server aggregates the received models and sends back the model updates to the nodes. It also handles failures for disconnected nodes or lost model updates. The next federated round is started returning to the client selection phase.<br>
+**Termination:** once a pre-defined termination criterion is met (e.g., a maximum number of iterations is reached or the model accuracy is greater than a threshold) the central server aggregates the updates and finalizes the global model.<br>
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
