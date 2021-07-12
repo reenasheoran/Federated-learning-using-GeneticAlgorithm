@@ -42,10 +42,10 @@ The interaction between client and server is implemented by using programming so
  Using FL, a model can be created directly out of such private data. 
 ## Screen Shots
 ![image1](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/7.png)
-![image2](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/3.png)
+![image2](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/4.png)
 ![image3](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/1.png)
-![image4](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/4.png)
+![image4](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/5.png)
 ![image5](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/2.png)
-![image6](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/5.png)
+![image6](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/3.png)
 ![image7](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/6.png)
 
