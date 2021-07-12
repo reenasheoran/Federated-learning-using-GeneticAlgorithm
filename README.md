@@ -15,7 +15,7 @@ The data is taken from UCI Machine Learning Repository https://archive.ics.uci.e
 5 - default: has credit in default? (categorical: 'no','yes','unknown')<br>
 6 - housing: has housing loan? (categorical: 'no','yes','unknown')<br>
 7 - loan: has personal loan? (categorical: 'no','yes','unknown')<br><br>
-_ related with the last contact of the current campaign:_<br>
+_related with the last contact of the current campaign:_<br>
 8 - contact: contact communication type (categorical: 'cellular','telephone')<br>
 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')<br>
 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')<br>
@@ -40,3 +40,5 @@ For the execution purpose of this project the bank data was horizontally splitte
 ## How it works
 The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. Using PyGAD, I’ll also create a feed-forward neural network (FFNN), also using a genetic algorithm (GA).
  Using FL, a model can be created directly out of such private data. 
+## Screen Shots
+![image1]
