@@ -3,7 +3,7 @@ This is a demo project for applying the concepts of federated learning (FL) in P
 ## Table of content
 [Project Overview](#Project-Overview)<br>
 [Motivation](#Motivation)<br>
-[What is Federated Learning?](#What-is-Federated-Learning-?)<br>
+[What is Federated Learning ?](#What-is-Federated-Learning-?)<br>
 [Genetic Algorithm](#Genetic-Algorithm)<br>
 [Installation](#Installation)<br>
 [Data Collection](#Data-Collection)<br>
@@ -45,6 +45,7 @@ Genetic algorithms use the evolutionary generational cycle to produce high-quali
 **Replacement**: Generational replacement takes place in this phase, which is a replacement of the old population with the new child population. The new population consists of higher fitness scores than the old population, which is an indication that an improved solution has been generated.<br>
 **Termination**: After replacement has been done, a stopping criterion is used to provide the basis for termination. The algorithm will terminate after the threshold fitness solution has been attained. It will identify this solution as the best solution in the population.<br>
 ## Installation
+
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
