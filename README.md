@@ -14,18 +14,18 @@ The data is taken from UCI Machine Learning Repository https://archive.ics.uci.e
 4 - education (categorical: 'basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown')<br>
 5 - default: has credit in default? (categorical: 'no','yes','unknown')<br>
 6 - housing: has housing loan? (categorical: 'no','yes','unknown')<br>
-7 - loan: has personal loan? (categorical: 'no','yes','unknown')<br>
-_italics_ related with the last contact of the current campaign: _italics_<br>
+7 - loan: has personal loan? (categorical: 'no','yes','unknown')<br><br>
+_ related with the last contact of the current campaign:_<br>
 8 - contact: contact communication type (categorical: 'cellular','telephone')<br>
 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')<br>
 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')<br>
-11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model. <br>
-_italics_ other attributes: _italics_<br>
+11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model. <br><br>
+_other attributes:_<br>
 12 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)<br>
 13 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)<br>
 14 - previous: number of contacts performed before this campaign and for this client (numeric)<br>
-15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')<br>
-_italics_ social and economic context attributes: _italics_<br>
+15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')<br><br>
+_social and economic context attributes:_<br>
 16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)<br>
 17 - cons.price.idx: consumer price index - monthly indicator (numeric)<br>
 18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric)<br>
