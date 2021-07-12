@@ -3,7 +3,7 @@ This is a demo project for applying the concepts of federated learning (FL) in P
 ## Table of content
 [Project Overview](#Project-Overview)<br>
 [Motivation](#Motivation)<br>
-[What is Federated Learning ?](#What-is-Federated-Learning-?)<br>
+[What is Federated Learning?](#What-is-Federated-Learning?)<br>
 [Genetic Algorithm](#Genetic-Algorithm)<br>
 [Installation](#Installation)<br>
 [Data Collection](#Data-Collection)<br>
@@ -16,7 +16,7 @@ I have created a centralized client-server architecture in which a central serve
 ## Motivation
 Most of the data in the world are contained not publicly on servers, but on client-side devices and sources (i.e. mobile phones, edge devices). Typically, users don’t end up directly sharing their data anywhere outside their devices. And if they do, there’s no guarantee of privacy. <br>
 Federated Learning (FL) is a new paradigm for building machine learning (ML) models that keeps user data private. In this way, ML models are typically trained on data that’s not been collected and stored in a centralized server. In fact, the data is decentralized and scattered across clients. Through this project, I'll apply the concepts of FL in Python to build a demonstration of how a system like this might work.
-## What is Federated Learning ?
+## What is Federated Learning?
 Federated learning (also known as collaborative learning) is a machine learning technique that trains an algorithm across multiple decentralized edge devices or servers holding local data samples, without exchanging them. This approach stands in contrast to traditional centralized machine learning techniques where all the local datasets are uploaded to one server, as well as to more classical decentralized approaches which often assume that local data samples are identically distributed(wikipedia).<br>
 Federated learning enables multiple actors to build a common, robust machine learning model without sharing data, thus allowing to address critical issues such as data privacy, data security, data access rights and access to heterogeneous data. <br><br>
 Assuming a federated round composed by one iteration of the learning process, the learning procedure can be summarized as follows:<br>
