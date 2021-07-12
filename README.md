@@ -1,15 +1,15 @@
 # Federated learning using Genetic Algorithm
 This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.
 ## Table of content
-![Project Overview](#Project-Overview)<br>
-![Motivation](#Motivation)<br>
-![What is Federated Learning?](#What-is-Federated-Learning-?)<br>
-![Genetic Algorithm](#Genetic-Algorithm)<br>
-![Installation](#Installation)<br>
-![Data Collection](#Data-Collection)<br>
-![Data Preparation](#Data-Preparation)<br>
-![Working of the Project](#Working-of-the-Project)<br>
-![Screen Shots](#Screen-Shots)<br>
+[Project Overview](#Project-Overview)<br>
+[Motivation](#Motivation)<br>
+[What is Federated Learning?](#What-is-Federated-Learning-?)<br>
+[Genetic Algorithm](#Genetic-Algorithm)<br>
+[Installation](#Installation)<br>
+[Data Collection](#Data-Collection)<br>
+[Data Preparation](#Data-Preparation)<br>
+[Working of the Project](#Working-of-the-Project)<br>
+[Screen Shots](#Screen-Shots)<br>
 ## Project Overview
 In this project I tried to train the machine learning (ML) models using Federated Learning. The ML model is created using PyGAD, which is trained using the genetic algorithm (GA). The training data is available on client-side only and server has no access to that data. The test data is available on server side, which is used for model evaluation.
 I have created a centralized client-server architecture in which a central server is used to orchestrate the different steps of the algorithms and coordinate all the participating nodes during the learning process. The server is responsible for the nodes selection at the beginning of the training process and for the aggregation of the received model updates.
