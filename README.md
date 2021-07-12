@@ -3,7 +3,7 @@ This is a demo project for applying the concepts of federated learning (FL) in P
 ## Table of content
 [Project Overview](#Project-Overview)<br>
 [Motivation](#Motivation)<br>
-[Federated Learning](#Federated-Learning?)<br>
+[Federated Learning](#Federated-Learning)<br>
 [Genetic Algorithm](#Genetic-Algorithm)<br>
 [Installation](#Installation)<br>
 [Data Collection](#Data-Collection)<br>
