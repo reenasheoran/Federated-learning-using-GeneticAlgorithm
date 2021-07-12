@@ -1,5 +1,15 @@
 # Federated learning using Genetic Algorithm
 This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.
+## Table of content
+![Project Overview](#Project-Overview)<br>
+![Motivation](#Motivation)<br>
+![What is Federated Learning?](#What-is-Federated-Learning-?)<br>
+![Genetic Algorithm](#Genetic-Algorithm)<br>
+![Installation](#Installation)<br>
+![Data Collection](#Data-Collection)<br>
+![Data Preparation](#Data-Preparation)<br>
+![Working of the Project](#Working-of-the-Project)<br>
+![Screen Shots](#Screen-Shots)<br>
 ## Project Overview
 In this project I tried to train the machine learning (ML) models using Federated Learning. The ML model is created using PyGAD, which is trained using the genetic algorithm (GA). The training data is available on client-side only and server has no access to that data. The test data is available on server side, which is used for model evaluation.
 I have created a centralized client-server architecture in which a central server is used to orchestrate the different steps of the algorithms and coordinate all the participating nodes during the learning process. The server is responsible for the nodes selection at the beginning of the training process and for the aggregation of the received model updates.
@@ -34,6 +44,7 @@ Genetic algorithms use the evolutionary generational cycle to produce high-quali
 **Mutation**: This operator adds new genetic information to the new child population. This is achieved by flipping some bits in the chromosome. Mutation solves the problem of local minimum and enhances diversification. The following image shows how mutation is done.<br>
 **Replacement**: Generational replacement takes place in this phase, which is a replacement of the old population with the new child population. The new population consists of higher fitness scores than the old population, which is an indication that an improved solution has been generated.<br>
 **Termination**: After replacement has been done, a stopping criterion is used to provide the basis for termination. The algorithm will terminate after the threshold fitness solution has been attained. It will identify this solution as the best solution in the population.<br>
+## Installation
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
@@ -63,11 +74,11 @@ _social and economic context attributes:_<br>
 
 **Output variable (desired target)**<br>
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')<br>
-## Data Preperation
+## Data Preparation
 To train a model using FL, the training data is distributed across the clients. The server itself does not have any training data, just test data to assess the model received from the clients. <br>
-For the execution purpose of this project the bank data was horizontally splitted into three equal parts ( rows each). Out of these three dataset parts, one was kept at server side (as test data) and the remaining two parts were kept at two different client locations to which server has not access at all.
-## How it works
-The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. Using PyGAD, I’ll also create a feed-forward neural network (FFNN), also using a genetic algorithm (GA).
+For the execution purpose of this project the bank data was horizontally splitted into three equal parts ( rows each). Out of these three dataset parts, one was kept at server side (as test data) and the remaining two parts were kept at two different client locations to which server has no access at all.
+## Working of the Project
+The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. Using PyGAD, I also created a feed-forward neural network (FFNN), also using a genetic algorithm (GA).
  Using FL, a model can be created directly out of such private data. 
 ## Screen Shots
 ![image1](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/7.png)
