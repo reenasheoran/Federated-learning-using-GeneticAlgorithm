@@ -46,7 +46,15 @@ Genetic algorithms use the evolutionary generational cycle to produce high-quali
 **Replacement**: Generational replacement takes place in this phase, which is a replacement of the old population with the new child population. The new population consists of higher fitness scores than the old population, which is an indication that an improved solution has been generated.<br>
 **Termination**: After replacement has been done, a stopping criterion is used to provide the basis for termination. The algorithm will terminate after the threshold fitness solution has been attained. It will identify this solution as the best solution in the population.<br>
 ## Installation
-
+This project is developed using python 3.8. If you are using any lower version of python then I recommend you to upgrade your python to the latest version by using pip command. Follow the steps below to run this project locally.
+```
+git clone https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm.git
+cd Federated-learning-using-GeneticAlgorithm
+pip install -r requirements.txt
+python server_1.py
+python client_1.py
+python client_2.py
+```
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
