@@ -1,5 +1,5 @@
 # Federated learning using Genetic Algorithm
-This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.
+This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.The ML model is created using PyGAD which trains ML models using the genetic algorithm (GA).
 ![Concept](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/concept.ppm)
 ## Table of content
 [Project Overview](#Project-Overview)<br>
@@ -7,6 +7,7 @@ This is a demo project for applying the concepts of federated learning (FL) in P
 [Federated Learning](#Federated-Learning)<br>
 [Genetic Algorithm](#Genetic-Algorithm)<br>
 [Installation](#Installation)<br>
+[Project Files](#Project-Files)<br>
 [Data Collection](#Data-Collection)<br>
 [Data Preparation](#Data-Preparation)<br>
 [Working of the Project](#Working-of-the-Project)<br>
@@ -21,40 +22,45 @@ Federated Learning (FL) is a new paradigm for building machine learning (ML) mod
 Federated learning (also known as collaborative learning) is a machine learning technique that trains an algorithm across multiple decentralized edge devices or servers holding local data samples, without exchanging them. This approach stands in contrast to traditional centralized machine learning techniques where all the local datasets are uploaded to one server, as well as to more classical decentralized approaches which often assume that local data samples are identically distributed(wikipedia).<br>
 Federated learning enables multiple actors to build a common, robust machine learning model without sharing data, thus allowing to address critical issues such as data privacy, data security, data access rights and access to heterogeneous data. <br><br>
 Assuming a federated round composed by one iteration of the learning process, the learning procedure can be summarized as follows:<br>
-**Initialization:** according to the server inputs, a machine learning model (e.g., linear regression, neural network, boosting) is chosen to be trained on local nodes and initialized. Then, nodes are activated and wait for the central server to give the calculation tasks.<br>
-**Client selection:** a fraction of local nodes is selected to start training on local data. The selected nodes acquire the current statistical model while the others wait for the next federated round.<br>
-**Configuration:** the central server orders selected nodes to undergo training of the model on their local data in a pre-specified fashion (e.g., for some mini-batch updates of gradient descent).<br>
-**Reporting:** each selected node sends its local model to the server for aggregation. The central server aggregates the received models and sends back the model updates to the nodes. It also handles failures for disconnected nodes or lost model updates. The next federated round is started returning to the client selection phase.<br>
-**Termination:** once a pre-defined termination criterion is met (e.g., a maximum number of iterations is reached or the model accuracy is greater than a threshold) the central server aggregates the updates and finalizes the global model.<br>
+1. **Initialization:** according to the server inputs, a machine learning model (e.g., linear regression, neural network, boosting) is chosen to be trained on local nodes and initialized. Then, nodes are activated and wait for the central server to give the calculation tasks.<br>
+2. **Client selection:** a fraction of local nodes is selected to start training on local data. The selected nodes acquire the current statistical model while the others wait for the next federated round.<br>
+3. **Configuration:** the central server orders selected nodes to undergo training of the model on their local data in a pre-specified fashion (e.g., for some mini-batch updates of gradient descent).<br>
+4. **Reporting:** each selected node sends its local model to the server for aggregation. The central server aggregates the received models and sends back the model updates to the nodes. It also handles failures for disconnected nodes or lost model updates. The next federated round is started returning to the client selection phase.<br>
+5. **Termination:** once a pre-defined termination criterion is met (e.g., a maximum number of iterations is reached or the model accuracy is greater than a threshold) the central server aggregates the updates and finalizes the global model.<br>
 ## Genetic Algorithm
 A genetic algorithm is a search-based algorithm used for solving optimization problems in machine learning. This algorithm is important because it solves difficult problems that would take a long time to solve. <br><br>
 The following are some of the basic terminologies that can help us to understand genetic algorithms:<br>
-**Population:** This is a subset of all the probable solutions that can solve the given problem.<br>
-**Chromosomes:** A chromosome is one of the solutions in the population.<br>
-**Gene:** This is an element in a chromosome.<br>
-**Allele:** This is the value given to a gene in a specific chromosome.<br>
-**Fitness function:** This is a function that uses a specific input to produce an improved output. The solution is used as the input while the output is in the form of solution suitability.<br>
-**Genetic operators:** In genetic algorithms, the best individuals mate to reproduce an offspring that is better than the parents. Genetic operators are used for changing the genetic composition of this next generation.<br><br>
+1. **Population:** This is a subset of all the probable solutions that can solve the given problem.<br>
+2. **Chromosomes:** A chromosome is one of the solutions in the population.<br>
+3. **Gene:** This is an element in a chromosome.<br>
+4. **Allele:** This is the value given to a gene in a specific chromosome.<br>
+5. **Fitness function:** This is a function that uses a specific input to produce an improved output. The solution is used as the input while the output is in the form of solution suitability.<br>
+6. **Genetic operators:** In genetic algorithms, the best individuals mate to reproduce an offspring that is better than the parents. Genetic operators are used for changing the genetic composition of this next generation.<br><br>
 **Genetic Algorithms working**<br>
 Genetic algorithms use the evolutionary generational cycle to produce high-quality solutions. They use various operations that increase or replace the population to provide an improved fit solution.Genetic algorithms follow the following phases to solve complex optimization problems:<br>
-**Initialization**: The genetic algorithm starts by generating an initial population. This initial population consists of all the probable solutions to the given problem. The most popular technique for initialization is the use of random binary strings.<br>
-**Fitness assignment**: The fitness function helps in establishing the fitness of all individuals in the population. It assigns a fitness score to every individual, which further determines the probability of being chosen for reproduction. The higher the fitness score, the higher the chances of being chosen for reproduction.<br>
-**Selection**: In this phase, individuals are selected for the reproduction of offspring. The selected individuals are then arranged in pairs of two to enhance reproduction. These individuals pass on their genes to the next generation.The main objective of this phase is to establish the region with high chances of generating the best solution to the problem (better than the previous generation). The genetic algorithm uses the fitness proportionate selection technique to ensure that useful solutions are used for recombination.<br>
-**Reproduction**:This phase involves the creation of a child population. The algorithm employs variation operators that are applied to the parent population. The two main operators in this phase include crossover and mutation.<br>
-**Crossover**: This operator swaps the genetic information of two parents to reproduce an offspring. It is performed on parent pairs that are selected randomly to generate a child population of equal size as the parent population.<br>
-**Mutation**: This operator adds new genetic information to the new child population. This is achieved by flipping some bits in the chromosome. Mutation solves the problem of local minimum and enhances diversification. The following image shows how mutation is done.<br>
-**Replacement**: Generational replacement takes place in this phase, which is a replacement of the old population with the new child population. The new population consists of higher fitness scores than the old population, which is an indication that an improved solution has been generated.<br>
-**Termination**: After replacement has been done, a stopping criterion is used to provide the basis for termination. The algorithm will terminate after the threshold fitness solution has been attained. It will identify this solution as the best solution in the population.<br>
+1. **Initialization**: The genetic algorithm starts by generating an initial population. This initial population consists of all the probable solutions to the given problem. The most popular technique for initialization is the use of random binary strings.<br>
+2. **Fitness assignment**: The fitness function helps in establishing the fitness of all individuals in the population. It assigns a fitness score to every individual, which further determines the probability of being chosen for reproduction. The higher the fitness score, the higher the chances of being chosen for reproduction.<br>
+3. **Selection**: In this phase, individuals are selected for the reproduction of offspring. The selected individuals are then arranged in pairs of two to enhance reproduction. These individuals pass on their genes to the next generation.The main objective of this phase is to establish the region with high chances of generating the best solution to the problem (better than the previous generation). The genetic algorithm uses the fitness proportionate selection technique to ensure that useful solutions are used for recombination.<br>
+4. **Reproduction**:This phase involves the creation of a child population. The algorithm employs variation operators that are applied to the parent population. The two main operators in this phase include crossover and mutation.<br>
+5. **Crossover**: This operator swaps the genetic information of two parents to reproduce an offspring. It is performed on parent pairs that are selected randomly to generate a child population of equal size as the parent population.<br>
+6. **Mutation**: This operator adds new genetic information to the new child population. This is achieved by flipping some bits in the chromosome. Mutation solves the problem of local minimum and enhances diversification. The following image shows how mutation is done.<br>
+7. **Replacement**: Generational replacement takes place in this phase, which is a replacement of the old population with the new child population. The new population consists of higher fitness scores than the old population, which is an indication that an improved solution has been generated.<br>
+8. **Termination**: After replacement has been done, a stopping criterion is used to provide the basis for termination. The algorithm will terminate after the threshold fitness solution has been attained. It will identify this solution as the best solution in the population.<br>
 ## Installation
 This project is developed using python 3.8. If you are using any lower version of python then I recommend you to upgrade your python to the latest version by using pip command. Follow the steps below to run this project locally.
 ```
 git clone https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm.git
 cd Federated-learning-using-GeneticAlgorithm
 pip install -r requirements.txt
-python server_1.py
-python client_1.py
-python client_2.py
+python server1.py
+python client1.py
+python client2.py
 ```
+## Project Files
+The project has the following files:<br>
+1. **server1.py**: Firstly, it creates an initial model that is trained on the clients' devices using FL. Then, it gets the models from each client, trained on their own data. Then it aggregates the model and test it.
+2. **client1.py**: It trains the model sent by the server using its own data to which server has no access.
+3. **client2.py**: Another client that trains the server's model using its own data to which server has no access.
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
