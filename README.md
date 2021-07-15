@@ -1,5 +1,6 @@
 # Federated learning using Genetic Algorithm
 This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.
+![Concept](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/concept.ppm)
 ## Table of content
 [Project Overview](#Project-Overview)<br>
 [Motivation](#Motivation)<br>
