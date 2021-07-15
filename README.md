@@ -1,5 +1,5 @@
 # Federated learning using Genetic Algorithm
-This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.The ML model is created using PyGAD which trains ML models using the genetic algorithm (GA).
+This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.The ML model is created using PyGAD which trains ML models using the genetic algorithm (GA).<br>
 ![Concept](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/concept.ppm)
 ## Table of content
 [Project Overview](#Project-Overview)<br>
@@ -36,7 +36,7 @@ The following are some of the basic terminologies that can help us to understand
 4. **Allele:** This is the value given to a gene in a specific chromosome.<br>
 5. **Fitness function:** This is a function that uses a specific input to produce an improved output. The solution is used as the input while the output is in the form of solution suitability.<br>
 6. **Genetic operators:** In genetic algorithms, the best individuals mate to reproduce an offspring that is better than the parents. Genetic operators are used for changing the genetic composition of this next generation.<br><br>
-**Genetic Algorithms working**<br>
+### Genetic Algorithms working
 Genetic algorithms use the evolutionary generational cycle to produce high-quality solutions. They use various operations that increase or replace the population to provide an improved fit solution.Genetic algorithms follow the following phases to solve complex optimization problems:<br>
 1. **Initialization**: The genetic algorithm starts by generating an initial population. This initial population consists of all the probable solutions to the given problem. The most popular technique for initialization is the use of random binary strings.<br>
 2. **Fitness assignment**: The fitness function helps in establishing the fitness of all individuals in the population. It assigns a fitness score to every individual, which further determines the probability of being chosen for reproduction. The higher the fitness score, the higher the chances of being chosen for reproduction.<br>
