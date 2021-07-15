@@ -1,5 +1,5 @@
 # Federated learning using Genetic Algorithm
-This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.The ML model is created using PyGAD which trains ML models using the genetic algorithm (GA).<br>
+This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming.The ML model is created using PyGAD which trains ML models using the genetic algorithm (GA). To tried to create a classification model using this approach.<br>
 ![Concept](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/concept.ppm)
 ## Table of content
 [Project Overview](#Project-Overview)<br>
