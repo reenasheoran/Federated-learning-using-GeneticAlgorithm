@@ -58,7 +58,7 @@ python client2.py
 ```
 ## Project Files
 The project has the following files:<br>
-1. **server1.py**: Firstly, it creates an initial model that is trained on the clients' devices using FL. Then, it gets the models from each client, trained on their own data. Then it aggregates the model and test it.
+1. **server1.py**: Firstly, it creates an initial model that is trained on the clients' devices using FL. Then, it gets the models from each client, which is trained on their own data. Then it aggregates the model and test it.
 2. **client1.py**: It trains the model sent by the server using its own data to which server has no access.
 3. **client2.py**: Another client that trains the server's model using its own data to which server has no access.
 ## Data Collection
