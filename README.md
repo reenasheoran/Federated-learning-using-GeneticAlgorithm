@@ -12,6 +12,7 @@ This is a demo project for applying the concepts of federated learning (FL) in P
 [Data Preparation](#Data-Preparation)<br>
 [Working of the Project](#Working-of-the-Project)<br>
 [Screen Shots](#Screen-Shots)<br>
+[References](#References)<br>
 ## Project Overview
 In this project I tried to train the machine learning (ML) models using Federated Learning. The ML model is created using PyGAD, which is trained using the genetic algorithm (GA). The training data is available on client-side only and server has no access to that data. The test data is available on server side, which is used for model evaluation.
 I have created a centralized client-server architecture in which a central server is used to orchestrate the different steps of the algorithms and coordinate all the participating nodes during the learning process. The server is responsible for the nodes selection at the beginning of the training process and for the aggregation of the received model updates.
@@ -100,12 +101,19 @@ For the execution purpose of this project the bank data was first preprocessed a
 ## Working of the Project
 The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. 
 ## Screen Shots
+1. Establishment of connections between server and clients. Server is waiting for trained models.<br>
 ![image1](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/7.png)
+2. Model training at client1 site.<br>
 ![image2](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/4.png)
+3. Client1 generation versus fitness chart for training iterations.<br>
 ![image3](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/1.png)
+4. Model training at client2 site.<br>
 ![image4](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/5.png)
+5. Client2 generation versus fitness chart for training iterations.<br>
 ![image5](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/2.png)
+6. Server received the model from one client and predicting test data. <br>
 ![image6](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/3.png)
+7. Server calculated errors between actual and predicted data.
 ![image7](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/6.png)
 ## References
 1. https://pygad.readthedocs.io/en/latest/ <br>
