@@ -58,9 +58,13 @@ python client2.py
 ```
 ## Project Files
 The project has the following files:<br>
-1. **server1.py**: Firstly, it creates an initial model that is trained on the clients' devices using FL. Then, it gets the models from each client, which is trained on their own data. Then it aggregates the model and test it.
-2. **client1.py**: It trains the model sent by the server using its own data to which server has no access.
-3. **client2.py**: Another client that trains the server's model using its own data to which server has no access.
+1. **server1.py**: It performs the following tasks:-<br>
+  1. Firstly, it creates an initial model that is to be trained on the clients' devices using FL and sends the model to the selected client nodes. <br>
+  2. Secondly, it gets the trained models from each client node.<br> 
+  3. Thirdly, it tests the received models and calculate errors.<br>
+  4. Lastly, it aggregates the weights of all models and repeats the process.<br>
+3. **client1.py**: It trains the model sent by the server on its own local data to which server has no access.<br>
+4. **client2.py**: Another client that trains the server's model on its own local data to which server has no access.<br>
 ## Data Collection
 The data is taken from UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/bank+marketing (bank-additional-full.csv ) containing 41188 instances and 20 features, ordered by date (from May 2008 to November 2010)).<br>
 **Features** <br>
