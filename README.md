@@ -96,10 +96,9 @@ _social and economic context attributes:_<br>
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')<br>
 ## Data Preparation
 To train a model using FL, the training data is distributed across the clients. The server itself does not have any training data, just test data to assess the model received from the clients. <br>
-For the execution purpose of this project the bank data was horizontally splitted into three equal parts ( rows each). Out of these three dataset parts, one was kept at server side (as test data) and the remaining two parts were kept at two different client locations to which server has no access at all.
+For the execution purpose of this project the bank data was first preprocessed and then, horizontally splitted into three equal parts ( 13729 rows 65 columns each). Out of these three dataset parts, one was kept at server side (as test data) and the remaining two parts were kept at two different client locations(as training data) to which server has no access at all.
 ## Working of the Project
-The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. Using PyGAD, I also created a feed-forward neural network (FFNN), also using a genetic algorithm (GA).
- Using FL, a model can be created directly out of such private data. 
+The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. 
 ## Screen Shots
 ![image1](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/7.png)
 ![image2](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/4.png)
