@@ -51,7 +51,7 @@ Genetic algorithms use the evolutionary generational cycle to produce high-quali
 This project is developed using python 3.8. If you are using any lower version of python then I recommend you to upgrade your python to the latest version by using pip command. Follow the steps below to run this project locally.
 ```
 git clone https://github.com/reenasheoran/Welcome-Mr.-model.git
-cd Welcome-Mr.-model
+cd Welcome-Mr.-model-main
 pip install -r requirements.txt
 python server1.py
 python client1.py
