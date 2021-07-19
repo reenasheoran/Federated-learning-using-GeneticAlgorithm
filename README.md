@@ -1,4 +1,4 @@
-# Federated learning using Genetic Algorithm
+# Welcome Mr. model
 This is a demo project for applying the concepts of federated learning (FL) in Python using socket programming. The ML model is created using PyGAD package which trains ML models using the genetic algorithm (GA). I tried to create a classification model for bank problem using this approach. The classification goal is to predict if the client will subscribe a term deposit or not.<br>
 ![Concept](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/concept.ppm)
 ## Table of content
@@ -101,19 +101,19 @@ For the execution purpose of this project the bank data was first preprocessed a
 ## Working of the Project
 The interaction between client and server is implemented by using programming sockets with the socket Python library. The client-server architecture will handle multiple clients simultaneously. 
 ## Screen Shots
-1. Establishment of connections between server and clients. Server is waiting for trained models.<br>
+1. Establishment of connections between server and clients. Server is waiting for trained models.<br><br>
 ![image1](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/7.png)
-2. Model training at client1 site.<br>
+2. Model training at client1 site.<br><br>
 ![image2](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/4.png)
-3. Client1 generation versus fitness chart for training iterations.<br>
+3. Client1 generation versus fitness chart for training iterations.<br><br>
 ![image3](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/1.png)
-4. Model training at client2 site.<br>
+4. Model training at client2 site.<br><br>
 ![image4](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/5.png)
-5. Client2 generation versus fitness chart for training iterations.<br>
+5. Client2 generation versus fitness chart for training iterations.<br><br>
 ![image5](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/2.png)
-6. Server received the model from one client and predicting test data. <br>
+6. Server received the model from one client and predicting test data. <br><br>
 ![image6](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/3.png)
-7. Server calculated errors between actual and predicted data.
+7. Server calculated errors between actual and predicted data.<br>
 ![image7](https://github.com/reenasheoran/Federated-learning-using-GeneticAlgorithm/blob/main/static/6.png)
 ## References
 1. https://pygad.readthedocs.io/en/latest/ <br>
